@@ -23,15 +23,14 @@ import UIKit
 
 public class SPFakeBarView: UIView {
     
-    var style: SPNavigationTitleStyle = . small {
+    public var style: SPNavigationTitleStyle = . small {
         didSet {
             self.updateStyle()
         }
     }
     
     private var settedHeight: CGFloat = 0
-    
-    var height: CGFloat {
+    public var height: CGFloat {
         get {
             return (self.settedHeight) + (self.addStatusBarHeight ? UIViewController.statusBarHeight : 0)
         }
@@ -42,23 +41,23 @@ public class SPFakeBarView: UIView {
         
     }
     
-    var addStatusBarHeight: Bool = true {
+    public var addStatusBarHeight: Bool = true {
         didSet {
             self.updateHeight()
         }
     }
     
-    var elementsColor: UIColor = UINavigationController.elementsColor {
+    public var elementsColor: UIColor = UINavigationController.elementsColor {
         didSet {
             self.leftButton.setTitleColor(self.elementsColor)
             self.rightButton.setTitleColor(self.elementsColor)
         }
     }
     
-    var titleLabel = UILabel.init()
-    var subtitleLabel = UILabel.init()
-    var leftButton = UIButton.init()
-    var rightButton = UIButton.init()
+    public var titleLabel = UILabel.init()
+    public var subtitleLabel = UILabel.init()
+    public var leftButton = UIButton.init()
+    public var rightButton = UIButton.init()
     
     private var titleBottomConstraint: NSLayoutConstraint?
     private var heightConstraint: NSLayoutConstraint?
