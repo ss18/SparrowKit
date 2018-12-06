@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name          = "SparrowKit"
-  s.version       = "1.0.8"
+  s.version       = "1.1"
   s.summary       = "Simple swift classes for iOS development"
   s.homepage      = "https://github.com/IvanVorobei/SparrowKit"
   s.source        = { :git => "https://github.com/IvanVorobei/SparrowKit.git", :tag => s.version }
@@ -13,5 +13,5 @@ Pod::Spec.new do |s|
   s.platform      = :ios
   s.ios.deployment_target = "10.0"
 
-  s.source_files  = "Source/Sparrow/**/*.swift"
+  s.source_files  = "Source/SparrowKit/**/*.swift"
 end
