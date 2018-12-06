@@ -68,13 +68,13 @@ public class SPFakeBarView: UIView {
     private let blurView = UIVisualEffectView.init(style: .extraLight)
     private let separatorView = UIView()
     
-    init(style: SPNavigationTitleStyle) {
+    public init(style: SPNavigationTitleStyle) {
         super.init(frame: CGRect.zero)
         self.style = style
         self.commonInit()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.style = .small
         self.commonInit()

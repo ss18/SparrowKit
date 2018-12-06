@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name          = "SparrowKit"
-  s.version       = "1.0.6"
+  s.version       = "1.0.7"
   s.summary       = "Simple swift classes for iOS development"
   s.homepage      = "https://github.com/IvanVorobei/SparrowKit"
   s.source        = { :git => "https://github.com/IvanVorobei/SparrowKit.git", :tag => s.version }
