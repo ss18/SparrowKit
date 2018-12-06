@@ -33,12 +33,6 @@ public extension String {
     }
 }
 
-public extension Bool {
-    public static func random() -> Bool {
-        return arc4random_uniform(2) == 0
-    }
-}
-
 public extension Int {
     public static func random(_ n: Int) -> Int {
         return Int(arc4random_uniform(UInt32(n)))
