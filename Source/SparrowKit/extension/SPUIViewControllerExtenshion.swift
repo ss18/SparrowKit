@@ -55,12 +55,15 @@ extension UIViewController {
 extension UIViewController {
     
     func save(image: UIImage) {
-        if SPPermission.isAllow(.photoLibrary) {
+        if PHPhotoLibrary.authorizationStatus() == PHAuthorizationStatus.authorized {
             UIImageWriteToSavedPhotosAlbum(image, self, #selector(self.image(_:didFinishSavingWithError:contextInfo:)), nil)
         } else {
-            SPPermission.request(.photoLibrary) {
-                UIImageWriteToSavedPhotosAlbum(image, self, #selector(self.image(_:didFinishSavingWithError:contextInfo:)), nil)
-            }
+            PHPhotoLibrary.requestAuthorization({
+                finished in
+                DispatchQueue.main.async {
+                     UIImageWriteToSavedPhotosAlbum(image, self, #selector(self.image(_:didFinishSavingWithError:contextInfo:)), nil)
+                }
+            })
         }
     }
     
