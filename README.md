@@ -88,8 +88,8 @@ controller.setNavigationTitle("Title", style: .large)
 
 Safe area for controller:
 ```swift
-let _ = controller.topSafeArea
-let _ = controller.bottomSafeArea
+let _ = controller.safeArea.top
+let _ = controller.safeArea.bottom
 ```
 
 Set navigation title color:
