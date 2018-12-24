@@ -150,7 +150,7 @@ class SPNativeLoginViewController: SPNativeTableViewController {
             buttonCell?.button.stopLoading()
             
             switch oAuthState {
-            case .succsess:
+            case .success:
                 break
             case .needTwoFactor:
                 self.delegate?.needRequestCode()

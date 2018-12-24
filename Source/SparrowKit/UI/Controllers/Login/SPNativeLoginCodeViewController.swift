@@ -129,7 +129,7 @@ class SPNativeLoginCodeViewController: SPNativeTableViewController {
             
             buttonCell?.button.stopLoading()
             
-            if oAuthState != SPOauthState.succsess {
+            if oAuthState != SPOauthState.success {
                 UIAlertController.show(
                     title: self.content.errorOauthTitle,
                     message: self.content.errorOauthSubtitle,

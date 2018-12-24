@@ -47,7 +47,7 @@ public enum SPSocialNetwork {
 }
 
 public enum SPOauthState {
-    case succsess
+    case success
     case unvalidLogin
     case invalidLogin
     case unvalidPassword
