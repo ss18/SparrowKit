@@ -24,7 +24,7 @@ import UIKit
 class SPMengTransformTableViewCell: UITableViewCell {
     
     let collectionView = SPMengTransformCollectionView()
-    var collectionHeight: CGFloat = SPMengTransformCollectionView.recomendedHeight {
+    var collectionHeight: CGFloat = SPMengTransformCollectionView.recommendedHeight {
         didSet {
             self.collectionHeightConstraint.constant = self.collectionHeight
             self.updateConstraints()
@@ -59,7 +59,7 @@ class SPMengTransformTableViewCell: UITableViewCell {
         bottomAnchor.priority = UILayoutPriority(rawValue: 900)
         bottomAnchor.isActive = true
         
-        self.collectionHeightConstraint = collectionView.heightAnchor.constraint(equalToConstant: SPMengTransformCollectionView.recomendedHeight)
+        self.collectionHeightConstraint = collectionView.heightAnchor.constraint(equalToConstant: SPMengTransformCollectionView.recommendedHeight)
         self.collectionHeightConstraint.isActive = true
     }
 }

@@ -44,7 +44,7 @@ class SPMengTransformCollectionView: SPCollectionView {
     
     var data: [SPMengTransformCollectionData] = []
     var withParalax: Bool = true
-    static var recomendedHeight: CGFloat = 310
+    static var recommendedHeight: CGFloat = 310
     
     override func commonInit() {
         self.layout.scrollDirection = .horizontal
